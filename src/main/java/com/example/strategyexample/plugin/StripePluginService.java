@@ -1,6 +1,7 @@
 package com.example.strategyexample.plugin;
 
 import com.example.strategyexample.PaymentType;
+import jakarta.annotation.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,7 @@ public class StripePluginService implements PaymentPlugin {
   }
 
   @Override
-  public boolean supports(PaymentType paymentType) {
+  public boolean supports(@Nullable PaymentType paymentType) {
     return paymentType == PaymentType.STRIPE;
   }
 }

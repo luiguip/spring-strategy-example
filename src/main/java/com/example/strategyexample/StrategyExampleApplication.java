@@ -27,7 +27,7 @@ public class StrategyExampleApplication implements CommandLineRunner {
   }
 
   @Override
-  public void run(String... args) throws Exception {
+  public void run(String... args) {
     Arrays.stream(PaymentType.values())
         .forEach(p -> {
           paymentServices.get(p.name()).process();
